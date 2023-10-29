@@ -1,0 +1,63 @@
+{
+    "success": true,
+    "erros": [],
+    "message": "取得 header footer 資料",
+    "data": [
+        {
+            "header": {
+                "logo": {
+                    "image": "https://www.svgrepo.com/show/484441/ring.svg",
+                    "url": "/",
+                    "text": "Sara's Lunch"
+                },
+                "nav": [
+                    {
+                        "text": "Home",
+                        "url": "/"
+                    },
+                    {
+                        "text": "Products",
+                        "url": "/products"
+                    },
+                    {
+                        "text": "Help",
+                        "url": "/help"
+                    },
+                    {
+                        "text": "Cart",
+                        "url": "/cart"
+                    }
+                ]
+            },
+            "footer": {
+                "left_area": {
+                    "brand": {
+                        "name": "Sara's Lunch",
+                        "url": "/"
+                    },
+                    "wording": "用心為您準備每一份餐點，快速傳遞新鮮與美味。"
+                },
+                "right_area": {
+                    "social_area": [
+                        {
+                            "icon_name": "facebook",
+                            "icon_url": ""
+                        },
+                        {
+                            "icon_name": "instagram",
+                            "icon_url": ""
+                        },
+                        {
+                            "icon_name": "twitter",
+                            "icon_url": ""
+                        },
+                        {
+                            "icon_name": "email",
+                            "icon_url": ""
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
