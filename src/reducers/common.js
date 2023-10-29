@@ -1,7 +1,13 @@
-import { UPDATE_IS_LOADING_STATUS } from '../constant/reducer/common';
+import {
+  UPDATE_IS_LOADING_STATUS,
+  UPDATE_HEADER_DATA,
+  UPDATE_FOOTER_DATA
+} from '../constant/reducer/common';
 
 const initState = {
-  isLoading: true
+  isLoading: true,
+  header: {},
+  footer: {}
 };
 
 const common = (state = initState, action) => {
@@ -11,9 +17,21 @@ const common = (state = initState, action) => {
           ...state,
           isLoading: action.payload,
       }
+    
+    case UPDATE_HEADER_DATA:
+      return {
+        ...state,
+        header: action.payload
+      }
+    
+    case UPDATE_FOOTER_DATA:
+      return {
+        ...state,
+        footer: action.payload
+      }
 
-      default:
-        return state;
+    default:
+      return state;
     }
 }
 

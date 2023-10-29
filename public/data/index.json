@@ -1,0 +1,22 @@
+{
+    "success": true,
+    "erros": [],
+    "message": "取得首頁資料",
+    "data": [
+        {
+            "content": {
+                "main_area": [
+                    {
+                        "image": "https://images.unsplash.com/photo-1525596201491-f6eae338a205?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80",
+                        "main_text": "FRESHｘSWEET",
+                        "sub_text": "用心準備餐點，分享新鮮美味",
+                        "url": ""
+                    }
+                ],
+                "lunch_area": [],
+                "product_area": [],
+                "category_area": []
+            }
+        }
+    ]
+}

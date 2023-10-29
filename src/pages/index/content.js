@@ -1,16 +1,24 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from "react-redux";
-import { updateIsLoading } from '../../actions/common';
+import { useSetCommonState } from '../../hooks';
+import { useAppDispatch } from "../../hooks/redux";
+import { getCommonData } from "../../actions/api/headerFooter";
 
 const Content = () => {
-    const dispath = useDispatch();
+    const [isLoading, setIsLoading] = useSetCommonState();
 
     useEffect(() => {
-        dispath(updateIsLoading(false));
-    }, [dispath]);
+        setIsLoading(false);
+    }, [setIsLoading])
+
+    const dispatch = useAppDispatch();
+
+    useEffect(() => {
+        dispatch(getCommonData());
+    }, [dispatch]);
 
     return <>
-        Content
+        Content<br/>
+        { isLoading && 'text isLoading' }
     </>
 }
 
