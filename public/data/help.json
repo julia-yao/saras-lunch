@@ -4,6 +4,72 @@
     "message": "取得地址頁資料",
     "data": [
         {
+            "content": {
+                "main_area": [
+                    {
+                        "left_area": 
+                        {
+                            "main_text": "100 台北市中正區牯嶺街5巷2號",
+                            "text": "OUR STORE",
+                            "wording": "Sara's Lunch 是由兩位女性共同創立，結合了新鮮直送的作物和細緻烘焙的咖啡，把為家人準備的餐點放上餐桌，希望與朋友共享歡聚時刻！"
+                        },
+                        "right_area":[
+                            {
+                                "text": "CALL US",
+                                "main_text": "0914-000-222"
+                            },
+                            {
+                                "text": "TELL US",
+                                "main_text": "saraslunch@gmail.com"
+                            },
+                            {
+                                "text": "PENING TIME",
+                                "main_text": " M0N. - FRI. 08:00~17:00, SAT. - SUN. 11:00~20:00"
+                            }
+                        ]
+                    }
+                ],
+                "faq_area": [
+                    {
+                        "title": "常見問題",
+                        "question": [
+                            {
+                                "text": "1. 生日蛋糕可以當天預約嗎？",
+                                "wording": "需要準備特定食材，最晚請於三日前預約。"
+                            },
+                            {
+                                "text": "2. 有提供客製化餐點嗎？",
+                                "wording": "有提供客製宴會餐點，但不提供酒精類飲料。客製化訂單最少需10份，每份定價為 NT.600元整，並先預付訂金，謝謝！"
+                            },
+                            {
+                                "text": "3. 付款方式有哪些呢？",
+                                "wording": "除了現金與刷卡，也提供電子支付 LinePay 及 ApplePay。預定大量餐點需預付訂金，謝謝您！"
+                            },
+                            {
+                                "text": "4. 餐點有提供宅配服務嗎？",
+                                "wording": "為確保餐點品質，本店沒有提供冷凍宅配服務，請按照預定時間取餐，謝謝！"
+                            }
+                        ]
+                    }
+                ],
+                "contact_area": [
+                    {
+                        "text": "姓名"
+                    },
+                    {
+                        "text": "電話"
+                    },
+                    {
+                        "text": "電子信箱"
+                    },
+                    {
+                        "text": "留言"
+                    },
+                    {
+                        "btn_text": "送出留言"
+                    }
+                ]
+            }
             
         }
     ]

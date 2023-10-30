@@ -6,6 +6,11 @@ import App from './layout/App';
 import store from './store';
 import reportWebVitals from './reportWebVitals';
 
+import 'jquery';
+import 'popper.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
