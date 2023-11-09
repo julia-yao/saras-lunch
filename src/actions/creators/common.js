@@ -4,8 +4,10 @@ import {
     UPDATE_IS_LOADING_STATUS,
     UPDATE_HEADER_DATA,
     UPDATE_FOOTER_DATA,
-    UPDATE_INDEX_DATA
 } from "../../constant/reducer/common";
+import {
+    UPDATE_INDEX_DATA
+} from "../../constant/reducer/index";
 
 export const updateIsLoading = status => ({
     type: UPDATE_IS_LOADING_STATUS,

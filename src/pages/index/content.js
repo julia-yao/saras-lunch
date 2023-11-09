@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector } from "react-redux";
 import { useSetCommonState } from '../../hooks';
 import { useAppDispatch } from "../../hooks/redux";
-import { getCommonData } from "../../actions/api/headerFooter";
+import { getCommonData, getIndexData } from "../../actions/api/headerFooter";
 import MainPic from "../../components/index/main_pic";
 import '../../sass/pages/index.scss';
 
@@ -23,9 +23,10 @@ const Content = () => {
 
     useEffect(() => {
         dispatch(getCommonData());
+        dispatch(getIndexData());
     }, [dispatch]);
 
-    const mainareaData = useSelector(state => state.common.content);
+    const mainareaData = useSelector(state => state.index.content);
     const { main_text, sub_text, image } = mainareaData;
     console.log(main_text, sub_text, image);
 

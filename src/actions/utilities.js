@@ -6,3 +6,5 @@ export const interceptorErrorHandler = error => {
     axiosErrorHandler(error);
     return Promise.reject(error.response.data);
 };
+
+export const successResponseFormatter = res => res.data[0];
