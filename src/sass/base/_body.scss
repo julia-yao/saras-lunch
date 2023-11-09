@@ -1,0 +1,19 @@
+
+//font-size影響全站文字大小
+html {
+  font-size: 16px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  min-width: 375px;
+}
+
+a {
+  text-decoration: none;
+  transition: all .3s;
+}
+
+// 暫時設定容器寬度
+#app {
+}

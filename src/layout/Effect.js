@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import Spinner from "../components/common/spinner";
 
 const Effect = () => {
     const isLoading = useSelector(state => state.common.isLoading);
@@ -6,10 +7,8 @@ const Effect = () => {
     return <>
         <div>
             {/* isLoading */}
+            { isLoading && <Spinner />}
             {/* modal */}
-            Effect <br/>
-
-            { isLoading && "isLoading"}
         </div>
     </>
 }

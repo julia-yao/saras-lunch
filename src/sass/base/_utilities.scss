@@ -1,0 +1,250 @@
+$color-setting: (
+  'white': white,
+  'black': black,
+);
+
+@each $key, $val in $color-setting {
+  // 背景色
+  .bg-#{$key} {
+    background-color: #{$val} !important;
+  }
+
+  // 文字顏色
+  .text-#{$key} {
+    color: #{$val} !important;
+  }
+
+  // 邊框顏色
+  .border-#{$key} {
+    border-color: #{$val} !important;
+  }
+}
+
+//段落樣式層級
+.title {
+  font-size: rem(32);
+  font-weight: 900;
+}
+
+.subtitle {
+  font-size: rem(12);
+  font-weight: 400;
+}
+
+// 文字大小
+$text-size: (
+  '10': 10px,
+  '11': 11px,
+  '12': 12px,
+  '13': 13px,
+  '14': 14px,
+  '16': 16px,
+  '18': 18px,
+  '20': 20px,
+  '24': 24px,
+  '26': 26px,
+  '28': 28px,
+  '32': 32px,
+  '36': 36px,
+  '44': 44px,
+  '48': 48px,
+);
+
+@each $key, $val in $text-size {
+  .text-#{$key} {
+    font-size: #{$val} !important;
+    font-weight: 400;
+  }
+}
+
+//間距用樣式集
+$space-stops: (
+  '02': 2px,
+  '04': 4px,
+  '05': 5px,
+  '06': 6px,
+  '07': 7px,
+  '08': 8px,
+  '10': 10px,
+  '11': 11px,
+  '12': 12px,
+  '13': 13px,
+  '14': 14px,
+  '15': 15px,
+  '16': 16px,
+  '18': 18px,
+  '19': 19px,
+  '20': 20px,
+  '21': 21px,
+  '22': 22px,
+  '23': 23px,
+  '24': 24px,
+  '25': 25px,
+  '28': 28px,
+  '30': 30px,
+  '32': 32px,
+  '34': 34px,
+  '35': 35px,
+  '36': 36px,
+  '38': 38px,
+  '40': 40px,
+  '44': 44px,
+  '45': 45px,
+  '48': 48px,
+  '50': 50px,
+  '60': 60px,
+);
+
+// 圓角幅度
+$border-radius: (
+  '08': 8px,
+  '10': 10px,
+  '16': 16px,
+  '20': 20px,
+);
+
+@each $key, $val in $border-radius {
+  .rounded-#{$key} {
+    border-radius: #{$val} !important;
+  }
+}
+
+@each $key, $val in $space-stops {
+  .p-#{$key} {
+    padding: #{$val} !important;
+  }
+
+  .pt-#{$key} {
+    padding-top: #{$val} !important;
+  }
+
+  .pe-#{$key} {
+    padding-right: #{$val} !important;
+  }
+
+  .pb-#{$key} {
+    padding-bottom: #{$val} !important;
+  }
+
+  .ps-#{$key} {
+    padding-left: #{$val} !important;
+  }
+
+  .px-#{$key} {
+    padding-right: #{$val} !important;
+    padding-left: #{$val} !important;
+  }
+
+  .py-#{$key} {
+    padding-top: #{$val} !important;
+    padding-bottom: #{$val} !important;
+  }
+
+  .m-#{$key} {
+    margin: #{$val} !important;
+  }
+
+  .mt-#{$key} {
+    margin-top: #{$val} !important;
+  }
+
+  .me-#{$key} {
+    margin-right: #{$val} !important;
+  }
+
+  .mb-#{$key} {
+    margin-bottom: #{$val} !important;
+  }
+
+  .ms-#{$key} {
+    margin-left: #{$val} !important;
+  }
+
+  .mx-#{$key} {
+    margin-right: #{$val} !important;
+    margin-left: #{$val} !important;
+  }
+
+  .my-#{$key} {
+    margin-top: #{$val} !important;
+    margin-bottom: #{$val} !important;
+  }
+}
+
+@mixin finite-spacing-utils($bp: '') {
+  @each $key, $val in $space-stops {
+    .p-#{$key}#{$bp} {
+      padding: #{$val} !important;
+    }
+
+    .pt-#{$key}#{$bp} {
+      padding-top: #{$val} !important;
+    }
+
+    .pe-#{$key}#{$bp} {
+      padding-right: #{$val} !important;
+    }
+
+    .pb-#{$key}#{$bp} {
+      padding-bottom: #{$val} !important;
+    }
+
+    .ps-#{$key}#{$bp} {
+      padding-left: #{$val} !important;
+    }
+
+    .px-#{$key}#{$bp} {
+      padding-right: #{$val} !important;
+      padding-left: #{$val} !important;
+    }
+
+    .py-#{$key}#{$bp} {
+      padding-top: #{$val} !important;
+      padding-bottom: #{$val} !important;
+    }
+
+    .m-#{$key}#{$bp} {
+      margin: #{$val} !important;
+    }
+
+    .mt-#{$key}#{$bp} {
+      margin-top: #{$val} !important;
+    }
+
+    .me-#{$key}#{$bp} {
+      margin-right: #{$val} !important;
+    }
+
+    .mb-#{$key}#{$bp} {
+      margin-bottom: #{$val} !important;
+    }
+
+    .ms-#{$key}#{$bp} {
+      margin-left: #{$val} !important;
+    }
+
+    .mx-#{$key}#{$bp} {
+      margin-right: #{$val} !important;
+      margin-left: #{$val} !important;
+    }
+
+    .my-#{$key}#{$bp} {
+      margin-top: #{$val} !important;
+      margin-bottom: #{$val} !important;
+    }
+  }
+}
+
+@include finite-spacing-utils;
+
+@media (min-width: 544px) {
+  @include finite-spacing-utils($bp: '_sm');
+}
+
+@media (min-width: 768px) {
+  @include finite-spacing-utils($bp: '_md');
+}
+
+@media (min-width: 1024px) {
+  @include finite-spacing-utils($bp: '_lg');
+}

@@ -1,7 +1,10 @@
+//action creator
+
 import {
     UPDATE_IS_LOADING_STATUS,
     UPDATE_HEADER_DATA,
-    UPDATE_FOOTER_DATA
+    UPDATE_FOOTER_DATA,
+    UPDATE_INDEX_DATA
 } from "../../constant/reducer/common";
 
 export const updateIsLoading = status => ({
@@ -16,5 +19,9 @@ export const updateHeaderData = data => ({
 
 export const updateFooterData = data => ({
     type: UPDATE_FOOTER_DATA,
+    payload: data
+})
+export const updateIndexData = data => ({
+    type: UPDATE_INDEX_DATA,
     payload: data
 })

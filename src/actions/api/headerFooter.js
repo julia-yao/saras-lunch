@@ -1,4 +1,4 @@
-import { apiGetHeaderFooter } from '../instance/headerFooter';
+import { apiGetHeaderFooter, apiGetIndex } from '../instance/headerFooter';
 import * as commonAction from '../creators/common';
 
 // TODOS: 新增串連 redux 那段 更新 error modal
@@ -7,7 +7,12 @@ export const getCommonData = () => {
         dispatch(commonAction.updateIsLoading(true));
         
         try {
-            return apiGetHeaderFooter()
+            apiGetIndex().then(res=>{
+                //console.log(res.data[0].content.main_area[0].main_text)
+                dispatch(commonAction.updateIndexData(res.data[0].content.main_area[0]));
+            });
+
+            apiGetHeaderFooter()
                 .then(res => {
                     console.log(res);
 

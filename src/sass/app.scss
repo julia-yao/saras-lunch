@@ -1,0 +1,28 @@
+// Bootstrap
+@import "bootstrap/scss/functions";
+@import "abstracts/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "abstracts/utilities";
+
+// @import "~bootstrap/scss/functions";
+// @import "abstracts/variables";
+// @import "~bootstrap/scss/variables-dark";
+// @import "abstracts/utilities";
+// @import "~bootstrap/scss/bootstrap";
+
+// mixins
+@import "./utils/ellipsis";
+@import "./utils/fullbg";
+@import "./utils/img-scale";
+@import "./utils/px2em";
+@import "./utils/mixin";
+
+//引用Noto sans JP from Google fonts
+// @import "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap";
+
+// Base
+@import "base/base";
+@import "base/body";
+@import "base/utilities";

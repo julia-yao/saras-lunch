@@ -3,6 +3,7 @@ import { useRoutes } from 'react-router-dom';
 
 import MainLayout from '../layout/mainLayout';
 import Content from '../pages/index/content';
+import Category from '../pages/category';
 import WithoutHeaderFooterLayout from '../layout/withoutHeaderFooter';
 import Test from '../pages/test/Test';
 
@@ -19,6 +20,11 @@ const routes = [
                 path: '/',
                 element: <Content />,
                 breadcrumb: 'Content'
+            },
+            {
+                path: '/category',
+                element: <Category />,
+                breadcrumb: 'category'
             }
         ]
     },

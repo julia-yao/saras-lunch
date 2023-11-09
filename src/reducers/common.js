@@ -1,15 +1,19 @@
 import {
   UPDATE_IS_LOADING_STATUS,
   UPDATE_HEADER_DATA,
-  UPDATE_FOOTER_DATA
+  UPDATE_FOOTER_DATA,
+  UPDATE_INDEX_DATA
 } from '../constant/reducer/common';
 
+// first state
 const initState = {
   isLoading: true,
   header: {},
-  footer: {}
+  footer: {},
+  content:{}
 };
 
+// reducer
 const common = (state = initState, action) => {
   switch (action.type){
     case UPDATE_IS_LOADING_STATUS:
@@ -22,6 +26,12 @@ const common = (state = initState, action) => {
       return {
         ...state,
         header: action.payload
+      }
+
+    case UPDATE_INDEX_DATA:
+      return {
+        ...state,
+        content: action.payload
       }
     
     case UPDATE_FOOTER_DATA:
