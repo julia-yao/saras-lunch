@@ -8,8 +8,7 @@ import {
 const initState = {
   isLoading: true,
   header: {},
-  footer: {},
-  content:{}
+  footer: {}
 };
 
 // reducer
