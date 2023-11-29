@@ -1,10 +1,13 @@
 import React, { useEffect } from 'react';
-import { useSelector } from "react-redux";
 import { useSetCommonState } from '../../hooks';
 import { useAppDispatch } from "../../hooks/redux";
+import { useSelector } from "react-redux";
 import { getCommonData, getIndexData } from "../../actions/api/headerFooter";
 import MainPic from "../../components/index/main_pic";
 import '../../sass/pages/index.scss';
+import LunchPic from '../../components/index/lunch_area';
+import ProductArea from '../../components/index/product_area';
+import CategoryArea from '../../components/index/category_area';
 
 const Content = () => {
     /**
@@ -26,16 +29,25 @@ const Content = () => {
         dispatch(getIndexData());
     }, [dispatch]);
 
-    const mainareaData = useSelector(state => state.index.content);
-    const { main_text, sub_text, image } = mainareaData;
-    console.log(main_text, sub_text, image);
+    const IndexPageData = useSelector(state => state.index);
+    const { main_text,sub_text } = IndexPageData.main_area;
+    
+    const { left_section,mid_section,right_section } = IndexPageData.lunch_area;
+    const leftSection = Array.isArray(left_section) ? left_section[0] : [{}];
+    const midSection = Array.isArray(mid_section) ? mid_section[0] : [{}];
+    const rightSection = Array.isArray(right_section) ? right_section[0] : [{}];
+
+    //const productArea = IndexPageData.product_area;
+    //const bgImage = Array.isArray(product_area) ? product_area[0] : [{}];
+    console.log(left_section,mid_section,right_section);
 
     return <div className='index-page'>
-        <MainPic
-            main_text={mainareaData.main_text}
-            sub_text={mainareaData.sub_text}
-        />
-        
+            <MainPic main_text={main_text} sub_text={sub_text}/>
+        <div className='container'>
+            <LunchPic leftSection={leftSection} midSection={midSection} rightSection={rightSection}/>
+            <ProductArea />
+            <CategoryArea />
+        </div>
         { isLoading && 'text isLoading' }
     </div>
 }

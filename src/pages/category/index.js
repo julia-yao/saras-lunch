@@ -4,6 +4,10 @@ import { useSetCommonState } from '../../hooks';
 import { useAppDispatch } from "../../hooks/redux";
 import { getCommonData } from "../../actions/api/headerFooter";
 import '../../sass/pages/category.scss';
+import  CategoryList from "../../components/category/category_list"
+import Product from '../../components/category/product';
+import ProductDetail from '../../components/category/product_detail';
+
 
 const Category = () => {
     const [isLoading, setIsLoading] = useSetCommonState();
@@ -20,8 +24,10 @@ const Category = () => {
 
     console.log(isLoading);
 
-    return <div className='category-page container'>
-        category
+    return <div className='category-page container my-3'>
+        <CategoryList />
+        <Product />
+        <ProductDetail />
     </div>
 }
 

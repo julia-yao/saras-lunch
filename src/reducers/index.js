@@ -1,10 +1,12 @@
 import {
-  UPDATE_INDEX_DATA
+  UPDATE_INDEX_DATA,
+  UPDATE_LUNCHAREA_DATA
 } from '../constant/reducer/index';
 
 // first state
 const initState = {
-  content:{}
+  main_area: {},
+  lunch_area: {}
 };
 
 // reducer
@@ -13,7 +15,12 @@ const index = (state = initState, action) => {
     case UPDATE_INDEX_DATA:
       return {
         ...state,
-        content: action.payload
+        main_area: action.payload
+      }
+    case UPDATE_LUNCHAREA_DATA:
+      return {
+        ...state,
+        lunch_area: action.payload
       }
 
     default:

@@ -35,6 +35,7 @@ export const getIndexData = () => {
                 .then(res => {
                     const { content } = successResponseFormatter(res);
                     dispatch(commonAction.updateIndexData(content.main_area[0]));
+                    dispatch(commonAction.updateLunchAreaData(content.lunch_area));
                     
                     dispatch(commonAction.updateIsLoading(false));
                 }, (error) => {

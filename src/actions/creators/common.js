@@ -6,7 +6,8 @@ import {
     UPDATE_FOOTER_DATA,
 } from "../../constant/reducer/common";
 import {
-    UPDATE_INDEX_DATA
+    UPDATE_INDEX_DATA,
+    UPDATE_LUNCHAREA_DATA
 } from "../../constant/reducer/index";
 
 export const updateIsLoading = status => ({
@@ -25,5 +26,9 @@ export const updateFooterData = data => ({
 })
 export const updateIndexData = data => ({
     type: UPDATE_INDEX_DATA,
+    payload: data
+})
+export const updateLunchAreaData = data => ({
+    type: UPDATE_LUNCHAREA_DATA,
     payload: data
 })
